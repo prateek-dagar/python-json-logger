@@ -2,10 +2,11 @@
 
 ## Installation
 
-!!! note
-    All versions of this fork use version `>=3.0.0`.
+```{note}
+All versions of this fork use version `>=3.0.0`.
 
-    To use pre-fork versions use `python-json-logger<3`.
+To use pre-fork versions use `python-json-logger<3`.
+```
 
 ### Install via pip
 
@@ -24,7 +25,7 @@ pip install 'python-json-logger@https://github.com/nhairs/python-json-logger/rel
 
 ## Usage
 
-Python JSON Logger provides [`logging.Formatter`](https://docs.python.org/3/library/logging.html#logging.Formatter) classes that encode the logged message into JSON. Although [a variety of JSON encoders are supported](#alternate-json-encoders), the following examples will use the [JsonFormatter][pythonjsonlogger.json.JsonFormatter] which uses the the `json` module from the standard library.
+Python JSON Logger provides [`logging.Formatter`](https://docs.python.org/3/library/logging.html#logging.Formatter) classes that encode the logged message into JSON. Although [a variety of JSON encoders are supported](#alternate-json-encoders), the following examples will use the [JsonFormatter](reference/pythonjsonlogger/json.md) which uses the the `json` module from the standard library.
 
 ### Integrating with Python's logging framework
 
@@ -76,11 +77,13 @@ logger.info({
 })
 ```
 
-!!! warning
-    Be aware that if you log using a `dict`, other formatters may not be able to handle it.
+```{warning}
+Be aware that if you log using a `dict`, other formatters may not be able to handle it.
+```
 
-!!! note
-    Your `dict` is not modified when the formatter adds fields such as `exc_info`.
+```{note}
+Your `dict` is not modified when the formatter adds fields such as `exc_info`.
+```
 
 You can also add additional message fields using the `extra` argument.
 
@@ -94,7 +97,7 @@ logger.info(
 )
 ```
 
-Finally, any non-standard attributes added to a `LogRecord` will also be included in the logged data. See [Cookbook: Request / Trace IDs](cookbook.md#request-trace-ids) for an example.
+Finally, any non-standard attributes added to a `LogRecord` will also be included in the logged data. See [Cookbook: Request / Trace IDs](request-trace-ids) for an example.
 
 #### Default Fields
 
@@ -155,12 +158,13 @@ def my_default(obj):
 formatter = JsonFormatter(json_default=my_default)
 ```
 
-!!! note
-    When providing your own `json_default`, you likely want to call the original `json_default` for your encoder. Python JSON Logger provides custom default serializers for each encoder that tries very hard to ensure sane output is always logged.
+```{note}
+When providing your own `json_default`, you likely want to call the original `json_default` for your encoder. Python JSON Logger provides custom default serializers for each encoder that tries very hard to ensure sane output is always logged.
+```
 
 ### Alternate JSON Encoders
 
 The following JSON encoders are also supported:
 
-- [orjson](https://github.com/ijl/orjson) - [pythonjsonlogger.orjson.OrjsonFormatter][]
-- [msgspec](https://github.com/jcrist/msgspec) - [pythonjsonlogger.msgspec.MsgspecFormatter][]
+- [orjson](https://github.com/ijl/orjson) - [OrjsonFormatter](reference/pythonjsonlogger/orjson.md)
+- [msgspec](https://github.com/jcrist/msgspec) - [MsgspecFormatter](reference/pythonjsonlogger/msgspec.md)

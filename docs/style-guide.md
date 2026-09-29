@@ -1,3 +1,8 @@
+---
+orphan: true
+---
+
+(orphan)=
 # Python Style Guide
 
 This document outlines the coding style, conventions, and common patterns for the `python-json-logger` project. Adhering to this guide will help maintain code consistency, readability, and quality.

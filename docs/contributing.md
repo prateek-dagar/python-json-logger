@@ -63,8 +63,9 @@ mkdocs serve
 # grip
 ```
 
-!!! note
-    In general we will always squash merge pull requests so you do not need to worry about a "clean" commit history.
+```{note}
+In general we will always squash merge pull requests so you do not need to worry about a "clean" commit history.
+```
 
 ### 3. Checklist
 
@@ -95,11 +96,11 @@ Your code will be reviewed by a maintainer.
 
 If you're not familiar with code review start by reading [this guide](https://google.github.io/eng-practices/review/).
 
-!!! tip "Remember you are not your work"
+```{tip} Remember you are not your work
+You might be asked to explain or justify your choices. This is not a criticism of your value as a person!
 
-    You might be asked to explain or justify your choices. This is not a criticism of your value as a person!
-
-    Often this is because there are multiple ways to solve the same problem and the reviewer would like to understand more about the way you solved.
+Often this is because there are multiple ways to solve the same problem and the reviewer would like to understand more about the way you solved.
+```
 
 ## Common Topics
 

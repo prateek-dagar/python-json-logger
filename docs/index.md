@@ -19,7 +19,7 @@ This library assumes that you are famliar with the `logging` standard library pa
 ## Features
 
 - **Standard Library Compatible:** Implement JSON logging without modifying your existing log setup.
-- **Supports Multiple JSON Encoders:** In addition to the standard libary's `json` module, also supports the [`orjson`][pythonjsonlogger.orjson], [`msgspec`][pythonjsonlogger.msgspec] JSON encoders.
+- **Supports Multiple JSON Encoders:** In addition to the standard libary's `json` module, also supports the [`orjson`](reference/pythonjsonlogger/orjson.md), [`msgspec`](reference/pythonjsonlogger/msgspec.md) JSON encoders.
 - **Fully Customizable Output Fields:** Control required, excluded, and static fields including automatically picking up custom attributes on `LogRecord` objects. Fields can be renamed before they are output.
 - **Encode Any Type:** Encoders are customized to ensure that something sane is logged for any input including those that aren't supported by default. For example formatting UUID objects into their string representation and bytes objects into a base 64 encoded string.
 
@@ -70,3 +70,16 @@ This project was originally authored by [Zakaria Zajac](https://github.com/madza
 
 It is currently maintained by:
 - [Nicholas Hairs](https://github.com/nhairs) - [nicholashairs.com](https://www.nicholashairs.com)
+
+```{toctree}
+:hidden:
+:maxdepth: 2
+
+Home <self>
+quickstart
+cookbook
+changelog
+security
+contributing
+API Reference <reference/pythonjsonlogger/index>
+```

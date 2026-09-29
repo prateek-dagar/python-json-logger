@@ -38,6 +38,7 @@ class SillyFormatter(JsonFormatter):
 ```
 
 
+(request-trace-ids)=
 ## Request / Trace IDs
 
 There are many ways to add consistent request IDs to your logging. The exact method will depend on your needs and application.
@@ -211,8 +212,9 @@ ENVIRONMENT = os.environ.get('ENVIRONMENT', 'dev')
 
 By the nature of Python's logging library, the JSON formatters will only ever run in handlers which are enabled for the given log level. This saves the performance hit of constructing JSON that is never used - but what about the data we pass into the logger? There are two options available to us: using if statements to avoid the call altogether, or using lazy string evaluation libraries.
 
-!!! note
-    The below strategies will work for data passed in the `msg` and `extra` arguments.
+```{note}
+The below strategies will work for data passed in the `msg` and `extra` arguments.
+```
 
 To avoid the logging calls we use `logger.isEnabledFor` to ensure that we only start constructing our log messages if the logger is enabled:
 
